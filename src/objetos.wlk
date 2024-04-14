@@ -1,37 +1,139 @@
 import personas.*
 
 
-//Colores: Rojo y verde (Fuerte); Celeste y Pardo (Debil)
+//Colores: rojo y verde (Fuerte); celeste y pardo (Debil)
+object rojo {
+	method esColorFuerte(){
+		return true
+	}
+}
+
+object verde {
+	method esColorFuerte(){
+		return true
+	}
+}
+
+object celeste {
+	method esColorFuerte(){
+		return false
+	}
+}
+
+object pardo {
+	method esColorFuerte(){
+		return false
+	}
+}
+
 //Materiales: Cobre y Vidrio (Brillan); Lino, Madera y Cuero (No Brillan)
+object cobre {
+	method esBrillante(){
+		return true
+	}
+}
+
+object vidrio {
+	method esBrillante(){
+		return true
+	}
+}
+
+object lino {
+	method esBrillante(){
+		return false
+	}
+}
+
+object madera {
+	method esBrillante(){
+		return false
+	}
+}
+
+object cuero {
+	method esBrillante(){
+		return false
+	}
+}
+
+//Objetos varios
 
 object remera {
-	const color = "rojo"
-	const material = "lino"
-	const peso = 800
+	const peso = 800 
+	
+	method color(){
+		return rojo
+	}
+	method material(){
+		return lino
+	}
+	method cuantoPesa(){
+		return peso
+	}
 }
 
 object pelota {
-	const color = "pardo"
-	const material = "cuero"
-	var peso = 1300
+	const peso = 1300 
+	
+	method color(){
+		return pardo
+	}
+	method material(){
+		return cuero
+	}
+	method cuantoPesa(){
+		return peso
+	}
 }
 
 object biblioteca {
-	const color = "verde"
-	const material = "madera"
-	const peso = 8000
+	const peso = 8000 
+	
+	method color(){
+		return verde
+	}
+	method material(){
+		return madera
+	}
+	method cuantoPesa(){
+		return peso
+	}
 }
 
 object munieco {
-	const color = "celeste"
-	const material = "vidrio"
-	var peso = 0
+	var peso = 0 
 	
+	method color(){
+		return celeste
+	}
+	method material(){
+		return vidrio
+	}
+	method cuantoPesa(cuanto){
+		peso = cuanto
+	}
 }
 
 object placa {
-	const color = ""
-	const material = "cobre"
 	var peso = 0
+	var color = "" 
 	
+	method color(colorPlaca){
+		color = colorPlaca
+	}
+	method material(){
+		return cobre
+	}
+	method cuantoPesa(gramos){
+		peso = gramos
+	}
 }
+
+
+
+
+
+
+
+
