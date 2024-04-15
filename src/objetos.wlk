@@ -102,7 +102,7 @@ object biblioteca {
 }
 
 object munieco {
-	var peso = 0 
+	var peso = 0
 	
 	method color(){
 		return celeste
@@ -110,23 +110,36 @@ object munieco {
 	method material(){
 		return vidrio
 	}
-	method cuantoPesa(cuanto){
+	method peso(cuanto){
 		peso = cuanto
+	}
+	
+	method cuantoPesa(){
+		return peso
 	}
 }
 
 object placa {
 	var peso = 0
-	var color = "" 
+	var color
 	
-	method color(colorPlaca){
-		color = colorPlaca
+	method queColor(ingresoColor){
+		color = ingresoColor
 	}
+	
+	method color(){
+		return color
+	}
+	
 	method material(){
 		return cobre
 	}
-	method cuantoPesa(gramos){
-		peso = gramos
+	method cuantoPesa(cuanto){
+		peso = cuanto
+	}
+	
+	method peso(){
+		return peso
 	}
 }
 
