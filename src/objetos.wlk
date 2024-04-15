@@ -1,7 +1,8 @@
 import personas.*
 
+//-------------------------------COLORES------------------------------------
 
-//Colores: rojo y verde (Fuerte); celeste y pardo (Debil)
+//Colores: rojo, verde y naranja (Fuerte); celeste y pardo (Debil)
 object rojo {
 	method esColorFuerte(){
 		return true
@@ -9,6 +10,12 @@ object rojo {
 }
 
 object verde {
+	method esColorFuerte(){
+		return true
+	}
+}
+
+object naranja {
 	method esColorFuerte(){
 		return true
 	}
@@ -25,6 +32,8 @@ object pardo {
 		return false
 	}
 }
+
+//-------------------------------MATERIALES------------------------------------
 
 //Materiales: Cobre y Vidrio (Brillan); Lino, Madera y Cuero (No Brillan)
 object cobre {
@@ -57,7 +66,7 @@ object cuero {
 	}
 }
 
-//Objetos varios
+////----------------------------OBJETOS DE LA TIENDA------------------------------------
 
 object remera {
 	const peso = 800 
@@ -143,6 +152,69 @@ object placa {
 	}
 }
 
+//---------------------Nuevos Objetos
+object arito {
+	const peso = 180
+	
+	method color(){
+		return celeste
+	}
+	method material(){
+		return cobre
+	}
+	method cuantoPesa(){
+		return peso
+	}
+}
+
+object banquito {
+	const peso = 1700
+	var color = naranja
+	
+	method queColor(ingresoColor){
+		color = ingresoColor
+	}
+	
+	method color(){
+		return color
+	}
+	
+	method material(){
+		return cobre
+	}
+	
+	method peso(){
+		return peso
+	}
+}
+
+object cajita {
+	const peso = 400
+	var dentro 
+	
+	
+	method color(){
+		return rojo
+	}
+	method material(){
+		return cobre
+	}
+	method cuantoPesa(){
+		return peso
+	}
+	
+	method agregarObjeto(objeto){
+		dentro = objeto
+	}
+	
+	method queHayDentro(){
+		return dentro
+	}
+	
+	method pesoTotal(){
+		return peso + dentro.cuantoPesa()
+	}
+}
 
 
 
